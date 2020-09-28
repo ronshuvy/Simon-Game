@@ -3,8 +3,7 @@ var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [], userClickedPattern = [];
 var level = 0;
 
-/* Event Listeners*/
-$(document).on("keydown click", handleKeyPressed);
+$(document).on("keydown", handleKeyPressed);
 
 /* Functions */
 
@@ -13,7 +12,7 @@ function handleKeyPressed() {
   nextSequence();
 
   $(".btn").click(handleButtonClick);
-  $(this).off("keydown click");
+  $(document).off("keydown");
 }
 
 function handleButtonClick() {
@@ -78,5 +77,5 @@ function checkAnswer(currentLevel) {
 function startOver() {
   level = 0;
   gamePattern = [];
-  $(document).on("keydown click", handleKeyPressed);
+  $(document).on("keydown", handleKeyPressed);
 }
