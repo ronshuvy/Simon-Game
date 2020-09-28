@@ -13,7 +13,7 @@ function handleKeyPressed() {
   nextSequence();
 
   $(".btn").click(handleButtonClick);
-  $(this).off("keydown");
+  $(this).off("keydown taphold");
 }
 
 function handleButtonClick() {
