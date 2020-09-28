@@ -4,7 +4,7 @@ var gamePattern = [], userClickedPattern = [];
 var level = 0;
 
 /* Event Listeners*/
-$(document).on("keyword taphold", handleKeyPressed);
+$(document).on("keydown taphold", handleKeyPressed);
 
 /* Functions */
 
@@ -78,5 +78,5 @@ function checkAnswer(currentLevel) {
 function startOver() {
   level = 0;
   gamePattern = [];
-  $(document).on("keyword taphold", handleKeyPressed);
+  $(document).on("keydown taphold", handleKeyPressed);
 }
